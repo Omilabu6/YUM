@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffff;
+    font-family: 'Akatab';
+}
+.navSection{
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+}
+body{
+    background-color: rgba(60, 27, 2, 0.9);
+    z-index: -1;
+}
+.wrap{
+    margin: 3em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(72, 39, 13);
+    box-shadow: 1px 1px 10px 10px rgb(72, 39, 13);;
+    border-radius: 25px;
+}
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap:2em;
+}
+.nav ul{
+    padding: 0em 2em;
+    transition: 1s ease;
+}
+.nav ul li{
+    transition: 2s ease;
+    cursor: pointer;
+}
+.nav ul li:hover{
+    font-size: 1.5em;
+}
+.socials img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+.socials{
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    justify-content: left;
+}
+.socials img:hover{
+    width: 40px;
+    height: 40px;
+}
+.body h1{
+    font-size: 15em;
+    text-align: center;
+    position: relative;
+}
+.body{
+    position: relative;
+}
+.ice-cream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -9em;
+    left: 50%; /*centers the img*/
+    transform: translateX(-50%); /* Adjust for the element's width */
+    width: 100%;
+}
+
+.ice-cream img {
+    cursor: pointer;
+    transition: 2s ease-out;
+    width: 30%;
+    min-height: 30%;
+}
+.ice-cream img:hover {
+    transform: perspective(200px) rotateY(360deg);
+   
+}
+.chocolate img{
+    width: 70px;
+    position: absolute;
+    
+}
+#move img{
+    top: 25%;
+    right: 10%;
+}
+#move1 img{
+    top: -10%;
+    left: 10%;
+    
+}
+
+.mobile{
+    display: none
+}
+    @media (max-width:1000px){
+
+    .body h1{
+        font-size: 11em;
+    }
+    .ice-cream{
+        top: -3em;
+    }
+    }
+    @media (max-width:900px){
+
+        .body h1{
+            font-size: 9em;
+        }
+        .ice-cream{
+            top: -3em;
+        }
+        }
+
+    @media (max-width:650px){
+        .navSection{
+            display: none
+        }
+        .mobile{
+            display: block;
+        }
+        .body h1{
+            font-size: 8em;
+        }
+        .ice-cream img{
+            width:30%
+        }
+        .ice-cream{
+            top: 0;
+        }
+        .mobile{
+            display: flex;
+            padding:2em 1em;
+            justify-content: space-between;
+        }
+        .nav ul{
+            flex-direction: column;
+            display: none;
+            animation: opacity 0.5s ease-in;
+            overflow-x: hidden;
+        }
+        ul li{
+            padding: 1em 0em;
+        }
+        @keyframes opacity {
+            from{
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .nav{
+            position: relative;
+            
+        }
+        #navButton{
+            background-color: rgb(72, 39, 13);
+            z-index: 1;
+            top: 0;
+            right: -15%;
+            position: absolute;
+            height: 60vh;
+            min-width: 200px;
+        }
+        .nav button{
+            background-color: rgb(72, 39, 13);
+            border-radius: 5px;
+        }
+        .nav button img{
+            width:35px;
+            justify-content:center;
+            cursor: pointer;
+        }
+        .ice-cream{
+            height: 90%;
+        }
+    }
+    @media (max-width:600px){
+        .body h1{
+            font-size: 5.65em;
+        }
+        .ice-cream img{
+            width:30%
+        }
+        .wrap{
+            height: 80vh;
+        }
+    
+    }
+    @media (max-width:450px){
+        .body h1{
+            font-size: 4em;
+            position: relative;
+        }
+        .wrap{
+            margin: 3em 2em;
+        }
+        
+    .chocolate img{
+        width: 50px;
+        position: absolute;
+        
+    }
+    #move img{
+        top: 3em;
+        right: 0em;
+        z-index: -0.999;
+    }
+    #move1 img{
+        top: -1em;
+        left: 1em;
+        
+    }
+    }
+    
